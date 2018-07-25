@@ -30,59 +30,7 @@
     <body>
         <div id="map">
         </div>
-		<table leaflet-browser-print-pages>
-			<thead>
-				<tr>
-					<th>Option</th>
-					<th>Type</th>
-					<th>Default</th>
-					<th>Description</th>
-				</tr>
-			</thead>
-			<tbody>
-			<tr>
-			<td>title</td>
-			<td>String</td>
-			<td>'Print map'</td>
-			<td>Sets the text which appears as the tooltip of the print button</td>
-			</tr>
-			<tr>
-			<td>position</td>
-			<td><a href="http://leafletjs.com/reference-0.7.7.html#control-position" rel="nofollow">Leaflet control position</a></td>
-			<td>'topleft'</td>
-			<td>Position the print button</td>
-			</tr>
-			<tr>
-			<td>printModes</td>
-			<td>Array</td>
-			<td>["Portrait", "Landscape", "Auto", "Custom"]</td>
-			<td>Collection of page print actions</td>
-			</tr>
-			<tr>
-			<td>printModesNames</td>
-			<td>Object</td>
-			<td>{ Portrait: "Portrait", Landscape: "Landscape", Auto:"Auto", Custom:"Custom" }</td>
-			<td>Customize each print mode name</td>
-			</tr>
-			<tr>
-			<td>printLayer</td>
-			<td><a href="http://leafletjs.com/reference-0.7.7.html#tilelayer" rel="nofollow">Leaflet tile layer</a></td>
-			<td>null</td>
-			<td>A tiles layer to show instead of all current active tiles layers</td>
-			</tr>
-			<tr>
-			<td>closePopupsOnPrint</td>
-			<td>Boolean</td>
-			<td>true</td>
-			<td>Indicates if we need to force popup closing for printed map</td>
-			</tr>
-			<tr>
-			<td>contentSelector</td>
-			<td>String</td>
-			<td>"[leaflet-browser-print-content]"</td>
-			<td>Content selector for printed map, will select and dynamically inject content on printed maps. For full functionality please check "Printing additional content section"</td>
-			</tr></tbody></table>
-        <script src="js/qgis2web_expressions.js"></script>
+		<script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet-src.js"></script><script src="js/L.Control.Locate.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
@@ -153,7 +101,7 @@ L.control.browserPrint({
 	manualMode: false
 }).addTo(map);
         var basemap0 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, powered by <a href="https://www.vermessung-schwing-dr-neureither.de/sun-mobil">Sun-Mobil</a>,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 28
         });
         basemap0.addTo(map);
